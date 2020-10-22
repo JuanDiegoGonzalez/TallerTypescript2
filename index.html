@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller Typescript 2</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col card">
+                <h1>Juan Diego Gonzalez Gomez</h1>
+                <img class="img-fluid max-width: 100% height: auto" src="./Padlet.jpeg" alt="Avatar">
+                <br>
+                <h2>Datos Personales</h2>
+                <table class="table">
+                    <tbody id="student">
+                    </tbody>
+                </table>
+                <br>
+                AVISO: La carga de datos del estudiante solo funciona desde Live Server en Visual Studio Code
+            </div>
+            <div class="col card">
+                <h2>Cursos Actuales</h2>
+
+                Filtrar por nombre de curso:
+                <form style="margin:10px;">
+                    <div class="form-row">
+                        <div class="col">
+                            <input type="text" class="form-control" id="search-box" placeholder="Filtrar por nombre">
+                        </div>
+                        <div class="col">
+                            <button type="button" id="button-filterByName" class="btn btn-success">Aplicar</button>
+                        </div>
+                    </div>
+                </form>
+
+                Filtrar por rango de créditos:
+                <form style="margin:10px;">
+                    <div class="form-row">
+                        Entre
+                        <div class="col">
+                            <input type="number" class="form-control" id="rangoInferior" placeholder="Rango inferior">
+                        </div>
+                        y
+                        <div class="col">
+                            <input type="number" class="form-control" id="rangoSuperior" placeholder="Rango superior">
+                        </div>
+                        <div class="col">
+                            <button type="button" id="button-filterByCredits" class="btn btn-success">Aplicar</button>
+                        </div>
+                    </div>
+                </form>
+
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Curso</th>
+                            <th>Profesor</th>
+                            <th>Créditos</th>
+                        </tr>
+                    </thead>
+                    <tbody id="courses">
+                    </tbody>
+                </table>
+                <div class="row">
+                    <h5 class="col"><strong>Total Créditos:</strong></h5>
+                    <h5 class="col" id="total-credits"><strong></strong></h5>
+                </div>
+                <br>
+                AVISO: La carga de cursos solo funciona desde Live Server en Visual Studio Code
+            </div>
+        </div>
+    </div>
+    <script type="module" src="./scripts/course.js"></script>
+    <script type="module" src="./scripts/dataCourses.js"></script>
+    <script type="module" src="./scripts/main.js"></script>
+</body>
+
+</html>
